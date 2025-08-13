@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Chats</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <header>
+        <h2>📩 All Chats</h2>
+        <form method="GET" action="/chats/new">
+            <button class="btn btn-primary">➕ New Chat</button>
+        </form>
+    </header>
+
+    <div class="chat-container">
+        <% for (let chat of chats) { %>
+            <div class="chat-card">
+                
+                <!-- Sender -->
+                <div class="chat-header">
+                    <span class="from">👤 From: <strong><%= chat.from %></strong></span>
+                    <span class="datetime">
+                        🕒 <%= chat.created_at.toString().split(" ")[4] %> &nbsp;|&nbsp;
+                        📅 <%= chat.created_at.toString().split(" ").slice(0, 4).join("-") %>
+                    </span>
+                </div>
+
+                <!-- Message in a separate area -->
+                <div class="chat-message">
+                    <p><%= chat.msg %></p>
+                </div>
+
+                <!-- Receiver -->
+                <div class="chat-footer">
+                    <span class="to">📨 Received by: <strong><%= chat.to %></strong></span>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="chat-actions">
+                    <form method="GET" action="/chats/<%= chat._id %>/edit">
+                        <button class="btn btn-edit">✏️ Edit</button>
+                    </form>
+                    <form method="POST" action="/chats/<%= chat._id %>?_method=DELETE">
+                        <button class="btn btn-delete">🗑 Delete</button>
+                    </form>
+                </div>
+            </div>
+        <% } %>
+    </div>
+</body>
+</html>

@@ -1,0 +1,236 @@
+/* General Layout */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f4f6f8;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #007bff;
+    padding: 15px 20px;
+    color: white;
+}
+
+header h2 {
+    margin: 0;
+}
+
+.chat-container {
+    max-width: 900px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Chat Card Styling */
+.chat-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+    padding: 15px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.chat-card:hover {
+    transform: scale(1.02);
+}
+
+/* Header Section */
+.chat-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    border-bottom: 1px solid #eef2f5;
+    padding-bottom: 8px;
+    margin-bottom: 10px;
+}
+
+.from {
+    color: #2c3e50;
+    font-weight: bold;
+}
+
+.datetime {
+    color: #666;
+}
+
+/* Message Section */
+.chat-message {
+    background: #f9fbfd;
+    border-left: 4px solid #007bff;
+    padding: 12px;
+    margin: 10px 0;
+    font-size: 15px;
+    color: #333;
+    line-height: 1.5;
+    border-radius: 5px;
+}
+
+/* Receiver Section */
+.chat-footer {
+    font-size: 14px;
+    color: #2c3e50;
+    border-top: 1px solid #eef2f5;
+    padding-top: 8px;
+}
+
+/* Action Buttons */
+.chat-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.chat-actions form {
+    display: inline;
+}
+
+.btn {
+    padding: 6px 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.btn-primary {
+    background: #28a745;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #1e7e34;
+}
+
+.btn-edit {
+    background: #ffc107;
+    color: black;
+}
+
+.btn-edit:hover {
+    background: #e0a800;
+}
+
+.btn-delete {
+    background: #dc3545;
+    color: white;
+}
+
+.btn-delete:hover {
+    background: #c82333;
+}
+
+
+
+
+/* new.ejs */
+
+/* Form Container */
+.form-container {
+    max-width: 600px;
+    margin: 50px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 3px 8px rgba(0,0,0,0.1);
+}
+
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #007bff;
+}
+
+/* Form Elements */
+.chat-form .form-group {
+    margin-bottom: 15px;
+}
+
+.chat-form label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #333;
+}
+
+.chat-form input,
+.chat-form textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    resize: none;
+    transition: 0.2s;
+}
+
+.chat-form input:focus,
+.chat-form textarea:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.4);
+}
+
+.chat-form textarea {
+    min-height: 120px;
+}
+
+/* Buttons */
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.btn {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+}
+
+.btn-primary {
+    background: #28a745;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #218838;
+}
+
+.btn-secondary {
+    background: #6c757d;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background: #545b62;
+}
+
+
+/* edit.ejs */
+
+/* Info box for showing sender & receiver */
+.chat-info-box {
+    background: #f1f5f9;
+    padding: 12px 15px;
+    border-left: 4px solid #007bff;
+    border-radius: 6px;
+    margin-bottom: 18px;
+    font-size: 14px;
+    color: #333;
+}
+
+.chat-info-box p {
+    margin: 5px 0;
+}
+
+
